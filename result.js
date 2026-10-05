@@ -22,8 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const isCorrect = selected === q.answer;
     return `<div class="review-item ${isCorrect ? "correct" : "wrong"}">
       <h4>Q${i+1}. ${q.q}</h4>
-      <p>Your answer: <b>${selected === null ? "Not answered" : q.options[selected]}</b></p>
-      <p>Correct answer: <b>${q.options[q.answer]}</b></p>
+      <p>Your answer: <b>${
+  selected === null
+    ? "Not answered"
+    : q.options[selected]
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+}</b></p>
+
+<p>Correct answer: <b>${
+  q.options[q.answer]
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+}</b></p>
     </div>`;
   }).join("");
 });
