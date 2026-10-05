@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result | Examify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar"><div class="container nav-inner"><a class="brand" href="index.html"><span class="brand-mark">E</span> Examify</a><nav><a href="index.html#exams">Exams</a><a href="index.html#history">History</a></nav></div></header>
+  <main class="result-main">
+    <div class="container">
+      <div class="result-card">
+        <div id="resultIcon" class="result-icon">✓</div>
+        <p class="section-kicker">EXAM COMPLETED</p>
+        <h1 id="resultTitle">Great Job!</h1>
+        <p id="resultExam">Your result is ready.</p>
+        <div class="score-circle"><div><strong id="score">0</strong><span>/ 0</span></div></div>
+        <div class="result-stats">
+          <div><strong id="correct">0</strong><span>Correct</span></div>
+          <div><strong id="wrong">0</strong><span>Wrong</span></div>
+          <div><strong id="skipped">0</strong><span>Skipped</span></div>
+          <div><strong id="percentage">0%</strong><span>Percentage</span></div>
+        </div>
+        <div class="result-message" id="resultMessage"></div>
+        <div class="result-actions"><a href="index.html#exams" class="btn btn-primary">Take Another Exam</a><a href="index.html#history" class="btn btn-ghost">View History</a></div>
+      </div>
+      <section class="review-section">
+        <h2>Answer Review</h2>
+        <div id="reviewList"></div>
+      </section>
+    </div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>

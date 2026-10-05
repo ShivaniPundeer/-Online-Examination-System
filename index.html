@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Examify - Modern Online Examination System">
+  <title>Examify | Online Examination System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" data-nav="home"><span class="brand-mark">E</span> Examify</a>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">☰</button>
+      <nav id="navLinks">
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#exams" data-nav="exams">Exams</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#history" data-nav="history">History</a>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="page-section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span>●</span> SMART • SIMPLE • SECURE</div>
+          <h1>Test your knowledge.<br><span>Build your future.</span></h1>
+          <p>Take online exams, track your performance, and improve your skills with a modern digital examination platform.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-scroll="#exams">Explore Exams <span>→</span></button>
+            <button class="btn btn-ghost" data-scroll="#about">How it works</button>
+          </div>
+          <div class="hero-stats">
+            <div><strong>10K+</strong><small>Students</small></div>
+            <div><strong>50+</strong><small>Exams</small></div>
+            <div><strong>98%</strong><small>Satisfaction</small></div>
+          </div>
+        </div>
+        <div class="hero-card-wrap">
+          <div class="hero-orb"></div>
+          <div class="exam-preview">
+            <div class="preview-top"><span class="live-dot"></span> Live Assessment <span class="preview-time">15:00</span></div>
+            <div class="progress-line"><span></span></div>
+            <p class="preview-label">Question 4 of 10</p>
+            <h3>Which language is primarily used to style web pages?</h3>
+            <div class="preview-option correct">A. CSS <span>✓</span></div>
+            <div class="preview-option">B. Python</div>
+            <div class="preview-option">C. SQL</div>
+            <div class="preview-option">D. Java</div>
+            <div class="preview-footer"><span>◀ Previous</span><b>Next Question →</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="exams" class="page-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">CHOOSE YOUR CHALLENGE</p>
+            <h2>Available Exams</h2>
+          </div>
+          <div class="filter-group">
+            <button class="filter active" data-filter="All">All</button>
+            <button class="filter" data-filter="Technology">Technology</button>
+            <button class="filter" data-filter="Aptitude">Aptitude</button>
+            <button class="filter" data-filter="General Knowledge">GK</button>
+          </div>
+        </div>
+        <div id="examGrid" class="exam-grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="page-section about-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="section-kicker">WHY EXAMIFY?</p>
+          <h2>Everything you need for better assessments</h2>
+          <p>Designed to make digital testing simple, engaging and accessible on every device.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card"><div class="feature-icon purple">⏱</div><h3>Timed Exams</h3><p>Real exam-style countdown timers keep every assessment focused and fair.</p></article>
+          <article class="feature-card"><div class="feature-icon blue">✓</div><h3>Instant Results</h3><p>Get your score, percentage and correct/wrong answer summary immediately.</p></article>
+          <article class="feature-card"><div class="feature-icon green">↗</div><h3>Track Progress</h3><p>Review your previous attempts and see how you are improving over time.</p></article>
+          <article class="feature-card"><div class="feature-icon orange">▣</div><h3>Responsive</h3><p>Take exams comfortably on mobile phones, tablets and desktop screens.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="page-section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">YOUR PERFORMANCE</p><h2>Exam History</h2></div>
+          <button id="clearHistory" class="btn btn-small btn-danger">Clear History</button>
+        </div>
+        <div id="historyContent"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="brand" href="#home"><span class="brand-mark">E</span> Examify</a><p>Modern online examination platform for students and learners.</p></div>
+      <div><h4>Platform</h4><a href="#exams">Exams</a><a href="#history">History</a><a href="#about">About</a></div>
+      <div><h4>Support</h4><a href="mailto:support@examify.demo">Contact</a><a href="#about">How it works</a></div>
+      <div><h4>Quick Start</h4><p>Choose an exam, answer the questions, submit and view your instant result.</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Examify. Built for academic project demonstration.</div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
