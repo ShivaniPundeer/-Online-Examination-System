@@ -14,10 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
     $("questionNumber").textContent = `Question ${current + 1} of ${exam.questions.length}`;
     $("questionText").textContent = q.q;
     $("questionProgress").style.width = `${((current + 1) / exam.questions.length) * 100}%`;
-    $("options").innerHTML = q.options.map((option, i) => `
-      <div class="option ${answers[current] === i ? "selected" : ""}" data-index="${i}">
-        <span class="option-letter">${String.fromCharCode(65+i)}</span><span>${option}</span>
-      </div>`).join("");
+     $("options").innerHTML = q.options.map((option, i) => `
+  <div class="option ${answers[current] === i ? "selected" : ""}" data-index="${i}">
+    <span class="option-letter">${String.fromCharCode(65+i)}</span>
+    <span>${option
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+    }</span>
+  </div>`).join("");
     document.querySelectorAll(".option").forEach(el => el.addEventListener("click", () => {
       answers[current] = Number(el.dataset.index); render();
     }));
